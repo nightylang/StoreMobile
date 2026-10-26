@@ -1,0 +1,60 @@
+﻿@{
+    string LAbout = "Abouts";
+    string urlIndex = Url.Action("Index", "Home");
+    string urlAbout = Url.Action("About", "Home");
+    string urlProduct = Url.Action("Products", "Home");
+
+    // User
+    string urlUser = Url.Action("Index", "User");
+    string urlUserLogin = Url.Action("Login", "User");
+
+    // Admin
+    string urlAdmin = Url.Action("Index", "Admin");
+
+    // Product
+    string urlProducts = Url.Action("Index", "Product");
+
+}
+<header>
+    <div class="container-header">
+        <div class="logo-page">
+            <img src="~/WilMaDicFidLogo.png">
+            <a class="ATitle" asp-controller="Home" asp-action="Index">
+                <div class="title-page">Store Mobile</div>
+            </a>
+            <div class="loaderSite"></div>
+        </div>
+        <nav>
+            <a class="@ViewData["ActiveBtnH"]" asp-controller="Home" asp-action="Index">Home</a>
+            <a class="@ViewData["ActiveBtnP"]" asp-controller="Home" asp-action="Products">Product</a>
+            <a class="@ViewData["ActiveBtnA"]" asp-controller="Home" asp-action="About">About Us</a>
+                <a class="btnProfile @ViewData["ActiveBtnU"]" asp-controller="Home" asp-action="Profile">Profile</a>
+
+                <a class="@ViewData["ActiveBtnT"]" asp-controller="Admin" asp-action="Index">Admin</a>
+            @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+            {
+            }
+
+        </nav>
+        
+        <div class="UserInterface">
+            <a class="IsLogin btn-logout" href="">Log out</a>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <form asp-controller="User" asp-action="Logout" method="post" id="logoutForm" class="d-inline">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="IsLogout btn-logout" style="border: none; background: none; cursor: pointer;">
+                        Logout (@User.Identity.Name)
+                    </button>
+                </form>
+                <a class="IsLogin btn-login" href="@urlUserLogin">Login</a>
+                <a class="btnProfile @ViewData["ActiveBtnU"]" href="@urlUser">Profile</a>
+
+            }
+            else
+            {
+                <a class="IsLogout btn-login" href="@urlUserLogin">Login</a>
+            }
+        </div>
+    </div>
+</header>

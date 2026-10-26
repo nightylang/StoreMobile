@@ -1,0 +1,8 @@
+﻿@model List<StoreMobileV2.Models.AllModel.Model>
+<select name="ID_role" class="form-control">
+    <option value="">-- Select Role --</option>
+    @foreach (var models in Model)
+    {
+        <option value="@models.Id" selected="@(models.Id)">@models.Id</option>
+    }
+</select>
