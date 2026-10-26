@@ -1,4 +1,7 @@
-{
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {}
+"portsAttributes": {
+  "3000": {
+    "label": "Application server",
+    "onAutoForward": "openPreview",
+    "visibility": "public"
+  }
 }
