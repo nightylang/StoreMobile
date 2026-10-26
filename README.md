@@ -4,7 +4,7 @@ Welcome to **StoreMobile**, an intuitive and feature-rich mobile application des
 
 ---
 
-## 🌟 Features
+## 🚀 Features
 
 - **User Authentication:** Secure sign-up, login, and user profile management.
 - **Product Catalog:** Browse products by categories with real-time search and filter capabilities.
@@ -12,6 +12,11 @@ Welcome to **StoreMobile**, an intuitive and feature-rich mobile application des
 - **Shopping Cart:** Add, remove, and update quantities of items dynamically.
 - **Checkout Process:** Smooth order placement flow with summary breakdowns.
 - **Responsive UI:** Modern, clean, and mobile-first user interface design.
+- **User Authentication & Authorization**: Secure JWT-based login, registration, and role-based access control (e.g., Admin vs. Customer).
+- **Product & Catalog Management**: CRUD operations for products, categories, stock tracking, and searching/filtering.
+- **Cart & Order Processing**: Shopping cart persistence, order placement, order status updates, and history tracking.
+- **SQL Server Data Persistence**: Relational database modeling using **Entity Framework Core** (EF Core) with LINQ queries and migrations.
+- **Swagger / OpenAPI Documentation**: Interactive API testing and schema documentation out of the box.
 
 ---
 
@@ -23,16 +28,6 @@ Welcome to **StoreMobile**, an intuitive and feature-rich mobile application des
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 **StoreMobile** is a robust backend RESTful API built with **C#** and **ASP.NET Core**, backed by **Microsoft SQL Server**. It provides backend services for e-commerce and mobile store applications, supporting user authentication, product catalog management, shopping cart operations, order processing, and inventory management.
-
----
-
-## 🚀 Features
-
-- **User Authentication & Authorization**: Secure JWT-based login, registration, and role-based access control (e.g., Admin vs. Customer).
-- **Product & Catalog Management**: CRUD operations for products, categories, stock tracking, and searching/filtering.
-- **Cart & Order Processing**: Shopping cart persistence, order placement, order status updates, and history tracking.
-- **SQL Server Data Persistence**: Relational database modeling using **Entity Framework Core** (EF Core) with LINQ queries and migrations.
-- **Swagger / OpenAPI Documentation**: Interactive API testing and schema documentation out of the box.
 
 ---
 
