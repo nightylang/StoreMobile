@@ -118,15 +118,17 @@ Once running, open your browser and navigate to:
 https://localhost:7XXX/swagger
 ```
 
-📡 Sample Endpoints
-Method	Endpoint	Description	Auth Required
-POST	/api/auth/register	Register a new user account	No
-POST	/api/auth/login	Authenticate user and return JWT	No
-GET	/api/products	Get list of all products	No
-GET	/api/products/{id}	Get product details by ID	No
-POST	/api/products	Create a new product	Yes (Admin)
-POST	/api/cart/items	Add item to shopping cart	Yes
-POST	/api/orders	Place a new order	Yes
+## 📡 Sample Endpoints
+
+| Method | Endpoint | Description | Auth Required |
+| :--- | :--- | :--- | :--- |
+| `POST` | `/api/auth/register` | Register a new user account | No |
+| `POST` | `/api/auth/login` | Authenticate user and return JWT | No |
+| `GET` | `/api/products` | Get list of all products | No |
+| `GET` | `/api/products/{id}` | Get product details by ID | No |
+| `POST` | `/api/products` | Create a new product | Yes (Admin) |
+| `POST` | `/api/cart/items` | Add item to shopping cart | Yes |
+| `POST` | `/api/orders` | Place a new order | Yes |
 
 ---
 
