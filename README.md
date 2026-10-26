@@ -60,6 +60,79 @@ StoreMobile/
 ├── Middleware/          # Custom middleware (Error handling, JWT auth)
 ├── appsettings.json     # Configuration file (Connection strings, JWT keys)
 └── Program.cs           # Application entry point & dependency injection setup
+```
+
+---
+
+## ⚙️ Getting Started
+Prerequisites
+Make sure you have the following installed on your development machine:
+
+• .NET SDK (Version 6.0 / 7.0 / 8.0 or later)
+
+• Microsoft SQL Server or SQL Server Express / LocalDB
+
+• SQL Server Management Studio (SSMS) or Azure Data Studio
+
+• Git
+
+Installation & Configuration
+1 Clone the repository:
+
+```Bash
+git clone [https://github.com/nightylang/StoreMobile.git](https://github.com/nightylang/StoreMobile.git)
+cd StoreMobile
+```
+
+2 Configure Database Connection String:
+Open appsettings.json (or appsettings.Development.json) and update the SQL Server connection string to match your database instance:
+
+```JSON
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=DB_StoreMobile;Trusted_Connection=True;TrustServerCertificate=True;"
+  },
+  "Jwt": {
+    "Key": "YourSuperSecretKeyHere1234567890!",
+    "Issuer": "StoreMobileAPI",
+    "Audience": "StoreMobileApp"
+  }
+}
+```
+
+3 Apply Database Migrations:
+Run the following commands in your terminal to create the database schema:
+
+```Bash
+dotnet tool install --global dotnet-ef
+dotnet ef database update
+```
+
+(Alternatively, run Update-Database in Package Manager Console in Visual Studio.)
+
+4 Run the Application:
+
+```Bash
+dotnet run
+```
+
+5 Explore API Documentation:
+Once running, open your browser and navigate to:
+
+```Plaintext
+https://localhost:7XXX/swagger
+```
+
+📡 Sample Endpoints
+Method	Endpoint	Description	Auth Required
+POST	/api/auth/register	Register a new user account	No
+POST	/api/auth/login	Authenticate user and return JWT	No
+GET	/api/products	Get list of all products	No
+GET	/api/products/{id}	Get product details by ID	No
+POST	/api/products	Create a new product	Yes (Admin)
+POST	/api/cart/items	Add item to shopping cart	Yes
+POST	/api/orders	Place a new order	Yes
+
 ---
 
 ## 🤝 Contributing
