@@ -1,0 +1,24 @@
+﻿@model StoreMobileV2.Models.UserModel
+@{
+    ViewData["Title"] = "Profile";
+    ViewData["ActiveBtnU"] = "active";
+}
+@if(Model != null)
+{
+    <div class="glass-card profile">
+        <h2>My Profile</h2>
+        <div class="row" style="min-height: 180px ;margin-top: 10px; gap: 30px;">
+            <div class="col">
+                <img style="width: 100px; object-fit: cover; border-radius: 50%; border: 1px solid rgb(5, 0, 82);" src="https://i.pinimg.com/736x/e4/fe/ee/e4feee1e16642479b056c8ee7513b43a.jpg">
+            </div>
+            <div class="col" style="gap: 10px;">
+                <p><strong>P ID :</strong> @Model.ID_user</p>
+                <p><strong>Username:</strong> @Model.username</p>
+                <p><strong>Email:</strong> @Model.email</p>
+                <p><strong>Address:</strong> not set</p>
+            </div>
+        </div>
+        <h2>My Data</h2>
+        <p>Not have</p>
+    </div>
+}
