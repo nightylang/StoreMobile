@@ -1,0 +1,5 @@
+@dapr_url=http://localhost:3050
+@workflow_id={{$gwid}}
+Send Request 
+POST {{dapr_url}}/v1.0-betal/workflows/dapr/HelloWorldWorkflow/start?instanceID={{workflow_id}}
+Content-Type: application/text/plain
