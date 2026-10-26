@@ -1,4 +1,4 @@
-"portsAttributes": {
+"portsAttributes" : {
   "3000": {
     "label": "Application server",
     "onAutoForward": "openPreview",
