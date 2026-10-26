@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
-using StoreMobileV2.Data;
+using StoreMobile.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
