@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\StoreMobileV2\\StoreMobileV2.csproj": {}
+    "E:\\StoreMobile\\StoreMobile.csproj": {}
   },
   "projects": {
-    "E:\\StoreMobileV2\\StoreMobileV2.csproj": {
+    "E:\\StoreMobile\\StoreMobile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\StoreMobileV2\\StoreMobileV2.csproj",
-        "projectName": "StoreMobileV2",
-        "projectPath": "E:\\StoreMobileV2\\StoreMobileV2.csproj",
+        "projectUniqueName": "E:\\StoreMobile\\StoreMobile.csproj",
+        "projectName": "StoreMobile",
+        "projectPath": "E:\\StoreMobile\\StoreMobile.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\StoreMobileV2\\obj\\",
+        "outputPath": "E:\\StoreMobile\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
