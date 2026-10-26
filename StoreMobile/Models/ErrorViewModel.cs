@@ -7,3 +7,4 @@ namespace StoreMobile.Models
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }
 }
+
