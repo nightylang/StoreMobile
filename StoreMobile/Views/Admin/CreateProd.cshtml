@@ -1,0 +1,46 @@
+﻿@model StoreMobileV2.Models.ProductModel
+@{
+	ViewData["Title"] = "Add Product";
+	 Layout = "_LayoutAdmin";
+
+}
+<div class="container mt-5">
+	<h1>Add Course</h1>
+	<hr>
+	@if (ViewBag.Error != null)
+	{
+		<div class="alert alert-danger">@ViewBag.Error</div>
+	}
+	<form method="post" action="/Admin/CreateProd">
+		<div class="mb-3">
+			<label>Product ID Name</label>
+			<input type="text" name="id_name" value="@Model?.id_name" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label>Product Name</label>
+			<input type="text" name="product_name" value="@Model?.product_name" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label>Description</label>
+			<input type="text" name="product_description" value="@Model?.product_description" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label>Category</label>
+			<input type="number" name="id_category" value="@Model?.id_category" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label>Model</label>
+			<input type="number" name="id_model" value="@Model?.id_model" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label>Quantity</label>
+			<input type="number" name="qty" value="@Model?.qty" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label>Product Price</label>
+			<input type="number" name="product_price" value="@Model?.product_price" class="form-control">
+		</div>
+		<button type="submit" class="btn btn-primary">Save</button>
+		<a href="/Admin/Products" class="btn btn-secondary">Back</a>
+	</form>
+</div>

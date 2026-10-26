@@ -1,0 +1,40 @@
+﻿@model List<StoreMobileV2.Models.ProductModel>
+@{
+	 Layout = "_LayoutAdmin";
+	 ViewData["Title"] = "Product List";
+}
+		<h1>Product Management</h1>
+		<hr>
+		<a href="/Admin/CreateProd" class="btn btn-primary mb-3">Add Product</a>
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>ID Name</th>
+					<th>Product Name</th>
+					<th>Model</th>
+					<th>Category</th>
+					<th>Quantity</th>
+					<th>Price</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var prod in Model)
+				{
+					<tr>
+						<td>@prod.ID_product</td>
+						<td>@prod.id_name</td>
+						<td>@prod.product_name</td>
+						<td>@prod.id_model</td>
+						<td>@prod.id_category</td>
+						<td>@prod.qty</td>
+						<td>$@prod.product_price</td>
+					<td>
+						<a href="/Admin/EditProd/@prod.ID_product" class="btn btn-warning btn-sm">Edit</a>
+						<a href="/Admin/DeleteProd/@prod.ID_product" class="btn btn-danger btn-sm">Delete</a>
+					</td>
+					</tr>
+				}
+			</tbody>
+		</table>

@@ -1,0 +1,34 @@
+﻿@model StoreMobileV2.Models.UserModel
+@{
+	ViewData["Title"] = "Add User";
+	Layout = "_LayoutAdmin";
+
+}
+<div class="container mt-5">
+	<h1>Add Course</h1>
+	<hr>
+	@if (ViewBag.Error != null)
+	{
+		<div class="alert alert-danger">@ViewBag.Error</div>
+	}
+	<form method="post" action="/Admin/CreateUser">
+		<div class="mb-3">
+			<label>User Name</label>
+			<input type="text" name="username" value="@Model?.username" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label>User Email</label>
+			<input type="email" name="email" value="@Model?.email" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label>User Password</label>
+			<input type="password" name="password" value="@Model?.password" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label>User Image</label>
+			<input type="file"  name="Image" value="@Model?.Image" class="form-control">
+		</div>
+		<button type="submit" class="btn btn-primary">Save</button>
+		<a href="/Admin/Users" class="btn btn-secondary">Back</a>
+	</form>
+</div>

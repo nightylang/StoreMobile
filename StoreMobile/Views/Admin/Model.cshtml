@@ -1,0 +1,30 @@
+﻿@model List<StoreMobileV2.Models.AllModel.Model>
+@{
+	Layout = "_LayoutAdmin";
+	ViewData["Title"] = "Model List";
+}
+<h1>Model Management</h1>
+<hr>
+<a href="/Admin/Model" class="btn btn-primary mb-3">Add Model Phone</a>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>ID Model</th>
+			<th>Name Model</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var md in Model)
+		{
+			<tr>
+				<td>@md.Id</td>
+				<td>@md.Name</td>
+				<td>
+					<a href="/Admin/EditModel/@md.Id" class="btn btn-warning btn-sm">Edit</a>
+					<a href="/Admin/DeleteModel/@md.Id" class="btn btn-danger btn-sm">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

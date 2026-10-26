@@ -1,0 +1,36 @@
+﻿@model List<StoreMobileV2.Models.UserModel>
+@{
+	 Layout = "_LayoutAdmin";
+	 ViewData["Title"] = "User List";
+}
+		<h1>User Management</h1>
+		<hr>
+		<a href="/Admin/CreateUser" class="btn btn-primary mb-3">Add User</a>
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>ID User</th>
+					<th>Username</th>
+					<th>Email User</th>
+					<th>Role</th>
+					<th>Join Date</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var user in Model)
+				{
+					<tr>
+						<td>@user.ID_user</td>
+						<td>@user.username</td>
+						<td>@user.email</td>
+						<td>@user.ID_role</td>
+						<td>@user.CreatedAt</td>
+						<td>
+							<a href="/Admin/EditUser/@user.ID_user" class="btn btn-warning btn-sm">Edit</a>
+							<a href="/Admin/DeleteUser/@user.ID_user" class="btn btn-danger btn-sm">Delete</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>

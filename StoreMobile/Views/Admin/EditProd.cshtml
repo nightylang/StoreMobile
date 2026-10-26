@@ -1,0 +1,58 @@
+﻿@model Tuple<StoreMobileV2.Models.ProductModel, List<StoreMobileV2.Models.AllModel.Model>, List<StoreMobileV2.Models.AllModel.Category>>
+@{
+    ViewData["Title"] = "Edit Prod";
+    Layout = "_LayoutAdmin";
+}
+<div class="container mt-4">
+    <h2>Edit User</h2>
+    <form method="post" action="/Admin/EditProd">
+        <input type="hidden" name="ID_product" value="@Model.Item1.ID_product" />
+		<div class="mb-3">
+			<label class="form-label">ID Name Product</label>
+			<input type="text" name="id_name" value="@Model.Item1.id_name" class="form-control" />
+		</div>
+        <div class="mb-3">
+            <label class="form-label">Product Name</label>
+            <input type="text" name="product_name" value="@Model.Item1.product_name" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Model</label>
+            <select name="id_model" class="form-control">
+                <option value="">-- Select Model --</option>
+                @foreach (var models in Model.Item2)
+                {
+                    <option value="@models.Id" selected="@(models.Id)">@models.Name</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Quantity</label>
+            <input type="number" name="qty" value="@Model.Item1.qty" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Price</label>
+            <input type="number" name="product_price" value="@Model.Item1.product_price" class="form-control" />
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <input type="text" name="product_description" value="@Model.Item1.product_description" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Image</label>
+            <input type="file" name="id_image" value="@Model.Item1.id_image" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Category</label>
+            <select name="id_category" class="form-control">
+                <option value="">-- Select Category --</option>
+                @foreach (var cates in Model.Item3)
+                {
+                    <option value="@cates.Id" selected="@(cates.Id)">@cates.Name</option>
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Update User</button>
+        <a href="/Admin/Products" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
