@@ -15,47 +15,35 @@ Welcome to **StoreMobile**, an intuitive and feature-rich mobile application des
 
 ---
 
-## 🛠️ Tech Stack & Prerequisites
+## StoreMobile API & Backend Services
 
-### **Technologies Used**
-- **Language:** Kotlin / Java / React Native / Flutter *(adjust based on implementation)*
-- **Architecture:** MVVM (Model-View-ViewModel) / Clean Architecture
-- **Networking:** Retrofit / Axios for RESTful API communication
-- **State Management / UI:** Modern UI components & reactive state binding
+[![C#](https://img.shields.io/badge/Language-C%23-blue.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/)
+[![.NET Core / ASP.NET Core](https://img.shields.io/badge/Framework-ASP.NET%20Core-512BD4.svg)](https://dotnet.microsoft.com/)
+[![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-CC292B.svg)](https://www.microsoft.com/sql-server)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-### **Prerequisites**
-Make sure you have the following installed on your machine before running the application:
-- [Android Studio](https://developer.android.com/studio) (latest version recommended)
-- [JDK 17+](https://www.oracle.com/java/technologies/downloads/)
-- Android SDK (API Level 21 or higher)
-- Git
+**StoreMobile** is a robust backend RESTful API built with **C#** and **ASP.NET Core**, backed by **Microsoft SQL Server**. It provides backend services for e-commerce and mobile store applications, supporting user authentication, product catalog management, shopping cart operations, order processing, and inventory management.
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Features
 
-Follow these steps to get a local copy up and running on your machine:
+- **User Authentication & Authorization**: Secure JWT-based login, registration, and role-based access control (e.g., Admin vs. Customer).
+- **Product & Catalog Management**: CRUD operations for products, categories, stock tracking, and searching/filtering.
+- **Cart & Order Processing**: Shopping cart persistence, order placement, order status updates, and history tracking.
+- **SQL Server Data Persistence**: Relational database modeling using **Entity Framework Core** (EF Core) with LINQ queries and migrations.
+- **Swagger / OpenAPI Documentation**: Interactive API testing and schema documentation out of the box.
 
-### 1. **Clone the Repository**
-```bash
-git clone https://github.com/nightylang/StoreMobile.git
-cd StoreMobile
-```
+---
 
-### 2. **Open in Android Studio / IDE**
-1. Launch **Android Studio**.
-2. Select **Open an existing project**.
-3. Navigate to the cloned `StoreMobile` folder and click **OK**.
+## 🛠️ Tech Stack
 
-### 3. **Sync Gradle & Build**
-Allow Android Studio to sync the project files and download necessary dependencies automatically.
-
-### 4. **Run the Application**
-1. Connect a physical Android device via USB debugging **OR** start an Android Virtual Device (AVD).
-2. Click the **Run** button (`Shift + F10`) or execute:
-```bash
-./gradlew installDebug
-```
+- **Language**: C# (.NET Core / ASP.NET Core)
+- **Web Framework**: ASP.NET Core Web API
+- **Database**: Microsoft SQL Server
+- **ORM**: Entity Framework Core / Dapper
+- **Authentication**: JSON Web Tokens (JWT) / ASP.NET Core Identity
+- **API Documentation**: Swagger (Swashbuckle)
 
 ---
 
@@ -63,20 +51,15 @@ Allow Android Studio to sync the project files and download necessary dependenci
 
 ```text
 StoreMobile/
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/com/example/storemobile/
-│   │   │   │   ├── data/       # Repositories, API models, & data sources
-│   │   │   │   ├── ui/         # Activities, Fragments, ViewModels, & UI components
-│   │   │   │   └── utils/      # Helpers, constants, and extension functions
-│   │   │   ├── res/            # Layouts, drawables, strings, and assets
-│   │   │   └── AndroidManifest.xml
-│   └── build.gradle
-├── build.gradle
-└── README.md
-```
-
+├── Controllers/         # API endpoints and route handlers
+├── Models/              # Entity models and database representations
+├── DTOs/                # Data Transfer Objects for API request/response
+├── Data/                # DbContext, EF Core migrations, and seeds
+├── Services/            # Business logic and service implementations
+├── Repositories/        # Data access layer / repository pattern
+├── Middleware/          # Custom middleware (Error handling, JWT auth)
+├── appsettings.json     # Configuration file (Connection strings, JWT keys)
+└── Program.cs           # Application entry point & dependency injection setup
 ---
 
 ## 🤝 Contributing
